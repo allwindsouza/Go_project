@@ -29,10 +29,17 @@ func main() {
 
 	fmt.Println("This is high scores updated: ", highscores)
 
-	sort.Ints(highscores)
+	// highscores = sort.Ints(highscores)
 
 	fmt.Println("This is high scores updated: ", highscores)
 
 	fmt.Println(sort.IntsAreSorted(highscores))
 
+	remove_index := 5
+
+	fmt.Println(highscores)
+
+	highscores = append(highscores[:remove_index], highscores[remove_index+1:]...)
+
+	fmt.Println(highscores)
 }
